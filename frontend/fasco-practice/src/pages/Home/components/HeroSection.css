@@ -1,0 +1,127 @@
+.first-home-container {
+    display: grid;
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.section-1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    background: #E0E0E0;
+    border-radius: 10px;
+}
+
+.section-2 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    background: #E0E0E0;
+    border-radius: 10px;
+}
+
+.section-3 {
+    grid-column: span 2 / span 2;
+    grid-row-start : 4;
+    grid-column-start: 3;
+    border-radius: 10px;
+}
+
+.section-4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    place-items: center;
+}
+
+.section-5 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 5;
+    grid-row: span 4 / span 4;
+    grid-row-start: 1;
+    border-radius: 10px;
+    background: #E0E0E0;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.photo2 {
+    width: 64%;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+
+}
+
+.photo1 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.photo3 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.photo4 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.text-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    line-height: 1;
+}
+
+.text-home {
+    font-family: poppins, sans-serif;
+    font-size: 65px;
+    color: #484848;
+    letter-spacing: -2px;
+    font-weight: medium;
+}
+.text-SALE {
+    font-family: poppins, sans-serif;
+    font-size: 120px;
+    font-weight: medium;
+    letter-spacing: -5px;
+    color: white;
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-color: #484848;
+}
+
+.text-new-collection {
+    font-family: poppins, sans-serif;
+    font-size: 15px;
+    color: #484848;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.content-center-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,33 @@
+.logo-slider-container {
+    width: 100%;
+    padding: 40px 0;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.logo-swiper {
+    width: 100%;
+}
+
+.logo-slide {  
+    display: flex;
+    width: auto !important;
+    justify-content: center;
+    align-items: center; 
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.logo-slide:hover {  
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.logo-img { 
+    width: 150px;  
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+}

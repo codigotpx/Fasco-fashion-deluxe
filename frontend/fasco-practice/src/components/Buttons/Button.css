@@ -1,0 +1,10 @@
+.btn-base {
+    padding: 14px 45px;
+    height: auto;
+    margin: 0 auto;
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

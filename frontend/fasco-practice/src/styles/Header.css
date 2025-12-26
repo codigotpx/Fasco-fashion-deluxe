@@ -1,0 +1,23 @@
+.header-site {
+    display: flex;
+    height: 45px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 45px 0;
+}
+
+.logo {
+    font-size: 40px;
+    font-family: 'volkhov', serif;
+    line-height: 100%;
+    justify-self: flex-start;
+    color: #484848;
+    fill: #484848;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
