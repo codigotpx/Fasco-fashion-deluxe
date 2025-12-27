@@ -1,5 +1,4 @@
 import '../styles/Footer.css'
-import { Link } from 'react-router';
 
 const Footer = () => {
     return (
@@ -16,8 +15,9 @@ const Footer = () => {
                         <li className="footer-li"><a href=""></a>FAQ,s</li>
                     </ul>
                 </div>
-                <p className="footer-copyright">Copyright © 2025. All Rights Reseved. Built by <Link className='footer-link-copyright'> 
-                Camilo cer</Link> and designed by <Link className='footer-link-copyright'> hamza anza</Link></p>
+                <p className="footer-copyright">Copyright © 2025. All Rights Reseved. Built by <a href='https://www.instagram.com/camilo_ce2/' 
+                className='footer-link-copyright' target='_blank'> Camilo cer</a> and designed by 
+                <a href="https://buymeacoffee.com/hamzaanza00" target="_blank" className='footer-link-copyright'> hamza anza</a></p>
             </section>
         </>
     )
