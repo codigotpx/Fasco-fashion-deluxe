@@ -1,6 +1,6 @@
 .deals-container {
     width: 100%;
-    margin-top: 50px;
+    padding: 70px 0;
     height: auto;
     display: flex;
 }

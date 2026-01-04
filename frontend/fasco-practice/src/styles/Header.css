@@ -3,7 +3,16 @@
     height: 45px;
     align-items: center;
     justify-content: space-between;
-    margin: 45px 0;
+    padding: 45px 0;
+    position: sticky;
+    top: 0;
+    transition: transform 0.3s ease-in-out;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+.header--hidden {
+    transform: translateY(-100%);
 }
 
 .logo {
@@ -20,4 +29,15 @@
     align-items: center;
     justify-content: flex-end;
     width: 100%;
+}
+
+.header--scrolled {
+    top: 15px;
+    width: 100%;
+    padding: 45px 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    height: 10px;
 }
