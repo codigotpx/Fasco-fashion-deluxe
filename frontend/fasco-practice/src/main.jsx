@@ -9,6 +9,7 @@ import Login from './pages/auth/Login.jsx'
 import Register from './pages/auth/Register.jsx'
 import ForgetPassword from './pages/auth/ForgetPassword.jsx'
 import Shop from './pages/Shop/Shop.jsx'
+import SectionProduct from './pages/Shop/components/SectionProduct.jsx'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Shop/>
+      },
+      {
+        path: 'product/:id',
+        element: <SectionProduct/>
       }
     ]
   },

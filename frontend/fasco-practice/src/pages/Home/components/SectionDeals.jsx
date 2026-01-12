@@ -15,7 +15,7 @@ const SectionDeals = () => {
 
     return (
         <>
-            <section id='secction-deals' className="deals-container">
+            <section id='section-deals' className="deals-container">
                 
                 <div className='deals-timer-container'>
                     <h2 className='text-deals-of-the-month'>Deals Of The Month</h2>

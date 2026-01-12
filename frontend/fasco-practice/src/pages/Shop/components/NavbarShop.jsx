@@ -1,16 +1,19 @@
 
 import { Link } from 'react-router'
 import './NavbarShop.css'
+import { useLocation } from 'react-router'
 
 const NavbarShop = () => {
+    const Location = useLocation()
+
     return (
         <div className='navbar-shop-container'>
             <nav className='navbar'>
                 <ul className='navbar-links'>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='#'>Shop</Link></li>
-                    <li><Link to='#'>Products</Link></li>
-                    <li><Link to='#'>Pages</Link></li>
+                    <li className='li-navbar' ><Link to='/'>Home</Link></li>
+                    <li className={Location === "/shop" ? 'li-navbar' : 'li-navbar-active'} ><Link to='#'>Shop</Link></li>
+                    <li className='li-navbar' ><Link to='#'>Products</Link></li>
+                    <li className='li-navbar' ><Link to='#'>Pages</Link></li>
                 </ul>
                 <ul className='navbar-ul-option'>
                     <li><button className='buttom-navbar-option'><img className='img-navbar-option' src="/search.svg" alt="" /></button></li>

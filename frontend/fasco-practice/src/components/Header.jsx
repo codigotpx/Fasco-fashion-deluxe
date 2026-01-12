@@ -41,7 +41,7 @@ const Header = () => {
     return (
         <header className={`header-site ${isHidden ? 'header--hidden' : ''} ${isScrolled ? 'header--scrolled' : ''}`}>
             <h1 className='logo'>FASCO</h1>
-                {Location.pathname === '/shop' ? <NavbarShop/> : <Navbar/>}
+                {Location.pathname.includes('/shop') ? <NavbarShop/> : <Navbar/>}
         </header>
     )
 }

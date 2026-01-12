@@ -46,7 +46,10 @@
 }
 
 .footer-li {
+    display: flex;
     font-family: poppins, sans-serif;
+    list-style: none;
+    gap: 20px;
     color: #484848 ;
     font-size: 13px;
     cursor: pointer;

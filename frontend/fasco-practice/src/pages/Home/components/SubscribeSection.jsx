@@ -6,7 +6,7 @@ import Button from '../../../components/Buttons/Button.jsx'
 
 const SubscribeSection = () => {
     return (
-        <section className='sub-container'>
+        <section id='section-subscribe' className='sub-container'>
             <img className='image-sub' src={imageSub1} alt="" />
             <div className='contianer-sub-content'>
                 <div className='description-container'>

@@ -5,6 +5,9 @@
     width: 100%;
 }
 
+.navbar-links {
+    list-style: none;
+}
 
 .navbar {
     display: flex;
@@ -14,6 +17,8 @@
 }
 .navbar-ul-option {
     display: flex;
+    list-style: none;
+    gap: 10px;
 }
 
 .buttom-navbar-option{
@@ -27,4 +32,66 @@
 .img-navbar-option {
     width: 16px;
     height: 16px;
+}
+
+
+.li-navbar,
+.li-navbar-active {
+    position: relative;
+    list-style: none;
+}
+
+.li-navbar a,
+.li-navbar-active a {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+ 
+.li-navbar a::after,
+.li-navbar-active a::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #000000, #222222);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.li-navbar a:hover {
+    color: #000000;
+}
+
+.li-navbar a:hover::after {
+    width: 60%;
+}
+
+.li-navbar-active a {
+    color: #000000;
+    font-weight: 600;
+}
+
+.li-navbar-active a::after {
+    width: 70%;
+    animation: slideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 70%;
+        opacity: 1;
+    }
 }
