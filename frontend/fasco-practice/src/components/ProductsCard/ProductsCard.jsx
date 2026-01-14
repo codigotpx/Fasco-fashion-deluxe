@@ -1,4 +1,3 @@
-import { Key } from 'lucide-react'
 import './ProductCard.css'
 import { Link } from 'react-router'
 
@@ -11,7 +10,7 @@ const ProductsCard = ({ product }) => {
         >
             <article className='product-card'>
                 <div className='container-image'>
-                    <img src={product.images[1]} 
+                    <img src={product.images[0]} 
                     alt={product.title} 
                     className="product-image"
                     />

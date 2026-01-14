@@ -11,8 +11,8 @@ const NavbarShop = () => {
             <nav className='navbar'>
                 <ul className='navbar-links'>
                     <li className='li-navbar' ><Link to='/'>Home</Link></li>
-                    <li className={Location === "/shop" ? 'li-navbar' : 'li-navbar-active'} ><Link to='#'>Shop</Link></li>
-                    <li className='li-navbar' ><Link to='#'>Products</Link></li>
+                    <li className={Location.pathname.startsWith('/shop') ? 'li-navbar-active' : 'li-navbar'} ><Link to='#'>Shop</Link></li>
+                    <li className={Location.pathname.includes('/product') ? 'li-navbar-active' : 'li-navbar'} ><Link to='#'>Products</Link></li>
                     <li className='li-navbar' ><Link to='#'>Pages</Link></li>
                 </ul>
                 <ul className='navbar-ul-option'>
