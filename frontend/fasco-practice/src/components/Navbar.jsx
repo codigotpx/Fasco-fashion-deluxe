@@ -1,5 +1,4 @@
 import '../styles/Navbar.css';
-import Button from './Buttons/Button.jsx'
 import { Link } from 'react-router'
 import { useState, useEffect } from 'react';
 
@@ -54,7 +53,7 @@ const Navbar = () => {
                         </li>
                     ))}
 
-                    <Button variant="primary">Sign Up</Button>
+                    <Link to="/register" className='link-buy-now'>Sign up</Link>
                 </ul>
 
                 <div className={`hamburguer ${isMenu ? 'active' : ''}`} id='hamburguer'

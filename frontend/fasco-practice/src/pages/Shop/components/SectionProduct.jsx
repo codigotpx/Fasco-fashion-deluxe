@@ -44,7 +44,6 @@ const SectionProduct = () => {
         
     }
     
-    console.log(product)
 
     const addCartProduct = ( product ) => {
         const existingProduct = cart.find(item => item.id === product.id)
