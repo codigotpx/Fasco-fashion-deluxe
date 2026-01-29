@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter } from 'react-router'
 import { RouterProvider } from 'react-router/dom'
@@ -51,10 +51,28 @@ const router = createBrowserRouter([
   }
 ]);
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+
+// eslint-disable-next-line react-refresh/only-export-components
+function AppWithLoader() {
+  useEffect(() => {
+    const loader = document.getElementById('loading-content');
+    if (loader) {
+      loader.classList.add('hidden');
+      setTimeout(() => {
+        loader.remove();
+      }, 500);
+    }
+  }, []);
+
+  return (
     <AuthProvider>
       <RouterProvider router={router} />
-    </AuthProvider> 
+    </AuthProvider>
+  );
+}
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <AppWithLoader />
   </StrictMode>
 )

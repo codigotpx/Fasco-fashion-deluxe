@@ -7,6 +7,8 @@ export const AuthProvider = ({ children }) => {
     const [ user, setUser ] = useState(null)
     const [ loading, setLoading ] = useState(true)
     const [ error, setError ] = useState(null)
+    const [ loadingProduct, setLoadingProduct ] = useState(true)
+
 
     useEffect(() => {
         checkAuth()
@@ -67,7 +69,9 @@ export const AuthProvider = ({ children }) => {
             register,
             login,
             logout,
-            checkAuth
+            checkAuth,
+            loadingProduct,
+            setLoadingProduct
         }}>
             {children}
         </AuthContext.Provider>

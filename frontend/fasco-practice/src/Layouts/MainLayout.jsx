@@ -5,6 +5,7 @@ import '../styles/Layout.css'
 import { NavbarProvider } from '../context/NavbarContext.jsx';
 
 const MainLayout = () => {
+
     return (
         <NavbarProvider>
             <div className='layout-container'>

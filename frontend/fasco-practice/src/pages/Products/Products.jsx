@@ -5,6 +5,7 @@ import Button from '../../components/Buttons/Button.jsx'
 import { useLocation } from "react-router"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import './Products.css'
+import { useAuth } from "../../context/AuthContext.jsx"
 
 const Products = () => {
 
@@ -13,6 +14,8 @@ const Products = () => {
     const [ loading, setLoading ] = useState(true)
     const [ error, setError ] = useState("")
     const [ visibleCount, setVisibleCount ] = useState(6)
+
+    const { setLoadingProduct } = useAuth()
 
     const [ actualPage, setActualPage ] = useState(1)
     const productsForPage = 9
@@ -46,10 +49,13 @@ const Products = () => {
         .finally(() => setLoading(false));
     }, []);
 
+    useEffect(() => {
+      setLoadingProduct(loading)
+    }, [loading, setLoadingProduct])
+
     const handleMore = () => {
       setVisibleCount(prev => prev + 6)
     }
-    
 
     if (loading) return <p>Loading products...</p>
     if (error) return <p>{error}</p>
