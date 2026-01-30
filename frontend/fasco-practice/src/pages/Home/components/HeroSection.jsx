@@ -9,7 +9,7 @@ import logoCalvinKlein from '../../../assets/logo-calvin-klein.png'
 import logoDenim from '../../../assets/logo-denim.png'
 import logoPrada from '../../../assets/logo-prada.png'
 import logoLouisVuitton from '../../../assets/logo-louis-vuitton.png'
-import LogoSlider from '../../../components/Slider/logoSlider.jsx'
+import LogoSlider from '../../../components/Slider/LogoSlider.jsx'
 
 const HeroSection = () => {
 
