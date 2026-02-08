@@ -5,25 +5,38 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .btn-primary {
-    background-color: #000;
-    color: #FFFFFF;   
+    background-color: var(--button-primary);
+    color: var(--button-primary-text);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary {
-    background-color: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    color: #000;
+    background-coaccent-color);
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: var(--accent-color);
+    padding: 7px 20px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--background)
+    color: var(--text-secondary);
     border: solid;
     border-width: 1px;
     border-radius: 5px;
-    border-color: #5B86E5;
+    border-color: var(--accent-color);
     padding: 7px 20px;
 }
 
@@ -32,13 +45,28 @@
   display: block;
   padding: 14px 45px;
   font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-load-more:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  background: black;
-  color: white;
+  backgrou2px solid var(--text-secondary);
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
+.btn-add-to-cart:hover {
+    background: var(--text-secondary);
+    color: var(--background
 .btn-add-to-cart {
   display: flex;
   justify-content: center;
@@ -48,9 +76,9 @@
   margin: 0;
   font-size: 16px;
   border-radius: 5px;
-  border: 1px solid #000;
+  border: 1px solid var(--text-secondary);
   cursor: pointer;
   background: transparent;
-  color: rgb(0, 0, 0);
+  color: var(--text-secondary);
 }
 

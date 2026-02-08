@@ -19,7 +19,7 @@
 }
 
 .text-coment-deals {
-    color: #8A8A8A;
+    color: var(--text-primary);
     font-size: 13px;
     
 }
@@ -44,8 +44,8 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    background: #000;
-    color: #fff;
+    background: var(--button-primary);
+    color: var(--button-primary-text);
     font-size: 13px;
 }
 

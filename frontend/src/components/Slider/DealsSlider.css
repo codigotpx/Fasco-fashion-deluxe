@@ -46,7 +46,7 @@
     transform: scale(1.1);
     border-radius: 15px;
     opacity: 1;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 /* Responsive para tablets */

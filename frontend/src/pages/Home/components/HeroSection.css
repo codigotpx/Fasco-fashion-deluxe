@@ -11,14 +11,14 @@
 .section-1 {
     grid-column: span 2 / span 2;
     grid-row: span 4 / span 4;
-    background: #E0E0E0;
+    background: var(--gray-light);
     border-radius: 10px;
 }
 
 .section-2 {
     grid-column: span 2 / span 2;
     grid-column-start: 3;
-    background: #E0E0E0;
+    background: var(--gray-light);
     border-radius: 10px;
 }
 
@@ -43,7 +43,7 @@
     grid-row: span 4 / span 4;
     grid-row-start: 1;
     border-radius: 10px;
-    background: #E0E0E0;
+    background: var(--gray-light);
 }
 
 .image-container {
@@ -97,7 +97,7 @@
 .text-home {
     font-family: poppins, sans-serif;
     font-size: 65px;
-    color: #484848;
+    color: var(--text-secondary);
     letter-spacing: -2px;
     font-weight: medium;
 }
@@ -106,15 +106,15 @@
     font-size: 120px;
     font-weight: medium;
     letter-spacing: -5px;
-    color: white;
+    color: var(--background);
     -webkit-text-stroke: .5px;
-    -webkit-text-stroke-color: #484848;
+    -webkit-text-stroke-color: var(--text-secondary);
 }
 
 .text-new-collection {
     font-family: poppins, sans-serif;
     font-size: 15px;
-    color: #484848;
+    color: var(--text-secondary);
     letter-spacing: 1px;
     margin-top: 10px;
 }
@@ -133,8 +133,8 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    background: #000;
-    color: #fff;
+    background: var(--button-primary);
+    color: var(--button-primary-text);
     font-size: 13px;
 }
 

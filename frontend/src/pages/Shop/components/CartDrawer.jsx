@@ -16,7 +16,7 @@ const CartDrawer = ({ isOpen, onClose}) => {
             <div className='container-header-cart'>
                 <h2>Shopping Cart</h2>
                 <button className='button-cart' onClick={onClose}>
-                    <img src="/xmark-solid-full.svg" width={20} alt="" />
+                    <img className='icon-close-cart-drawer' src="/xmark-solid-full.svg" width={20} alt="" />
                 </button>
             </div>
 

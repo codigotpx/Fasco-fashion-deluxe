@@ -17,7 +17,7 @@
 
 
 .title-product {
-    color: #000;
+    color: var(--text-secondary);
     font-weight: 500;
     display: flex;
     width: 100%;
@@ -28,6 +28,17 @@
     margin: 0 0 0 auto;
     cursor: pointer;
     transition: all 0.3s;
+    filter: invert(0);
+}
+
+@media (prefers-color-scheme: dark) {
+    .icon-star {
+        filter: invert(1) brightness(1.1);
+    }
+}
+
+[data-theme="dark"] .icon-star {
+    filter: invert(1) brightness(1.1);
 }
 
 .icon-star:hover {
@@ -58,7 +69,7 @@
 .image-carousel {
     flex: 0 0 50px;
     width: 50px;
-    background: #ebebeb;
+    background: var(--gray-lighter);
     height: auto;
     object-fit: contain;
     border-radius: 12px;
@@ -75,7 +86,7 @@
 .main-image {
     width: 290px;
     height: 400px;
-    background: #ebebeb;
+    background: var(--gray-lighter);
     border-radius: 12px;
     object-fit: cover;
     object-position: center;
@@ -94,7 +105,17 @@
     display: inline-block;
     font-weight: 900;
     font-size: 15px;
-    color: rgb(182, 181, 181);
+    color: var(--gray-very-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    .stars-outer {
+        color: var(--gray-lighter);
+    }
+}
+
+[data-theme="dark"] .stars-outer {
+    color: var(--gray-lighter);
 }
 
 .stars-outer::before {
@@ -108,7 +129,7 @@
     white-space: nowrap;
     overflow: hidden;
     width: var(--rating, 0%);
-    color: black;
+    color: var(--text-secondary);
 }
 
 .stars-inner::before {
@@ -124,29 +145,30 @@
 .p-price {
     font-family: "volkhov-regular";
     font-size: 20px;
-    color: #000;
+    color: var(--text-secondary);
 }
 
 .p-real-price {
     font-family: "volkhov-regular";
     font-size: 15px;
-    opacity: .5;
-    text-decoration: line-through ;
+    opacity: .7;
+    text-decoration: line-through;
+    color: var(--text-primary);
 }
 
 .p-save-money {
     font-size: 10px;
     font-family: "volkhov-regular";
     font-weight: 10;
-    background-color: #DA3F3F;
-    color: #ffff;
+    background-color: var(--error-color);
+    color: var(--background);
     border-radius: 20px;
     padding: 4px 10px;
 }
 
 .p-stock {
     font-size: 15px;
-    color: #666666;
+    color: var(--text-primary);
     margin: 5px 0;
 }
 
@@ -156,7 +178,7 @@
     height: 5px;
     overflow: hidden;
     position: relative;
-    background-color: #DEDEDE;
+    background-color: var(--gray-very-light);
     border-radius: 10px;
 }
 
@@ -166,35 +188,41 @@
     left: 0;
     height: 100%;
     width: var(--var-line);
-    background: #EF2D2D;
+    background: var(--error-color);
 }
 
 .button-sizes {
-    color: #000;
+    color: var(--text-secondary);
     width: 40px;
     height: 40px;
-    border: 1px solid #EEEEEE;
+    border: 2px solid var(--border);
     background: transparent;
     margin: 0 5px;
     display: inline-block;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .button-sizes:hover {
     transform: scale(1.1);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .button-sizes-active {
-    color: #ffff;
+    color: var(--background);
     width: 40px;
     height: 40px;
-    border: 1px solid #EEEEEE;
-    background: #000;
+    border: 2px solid var(--text-secondary);
+    background: var(--text-secondary);
     margin: 0 5px;
     display: inline-block;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .container-quantity {
@@ -206,7 +234,7 @@
 }
 
 .container-button-add-remove {
-    border: 1px solid #EEEEEE;
+    border: 1px solid var(--gray-very-light);
     display: flex;
     padding: 7px 10px;
     border-radius: 5px;
@@ -225,7 +253,7 @@
 
 .p-ask-a-question {
     display: flex;
-    color: #000;
+    color: var(--text-secondary);
     font-size: 12px;
     align-items: center;
     gap: 3px;
@@ -235,16 +263,17 @@
 .container-share {
     margin: 30px 0 0 0;
     display: flex;
-    width: 100%; 
+    gap: 10px;
+    font-weight: 5000%; 
     gap: 30px;
-    border-bottom: 1px solid #EEEEEE;
+    border-bottom: 1px solid var(--gray-very-light);
 }
 
 .p-delivery {
     display: flex;
     align-items: center;
     font-size: 12px;
-    color: #000;
+    color: var(--text-secondary);
     gap: 10px;
 }
 
@@ -259,7 +288,7 @@
     justify-content: center;
     padding: 20px;
     align-items: center;
-    background-color: #F8F8F8;
+    background-color: var(--gray-light);
     border-radius: 10px;
     margin-top: 30px;
 }

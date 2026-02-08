@@ -43,6 +43,22 @@
 .img-navbar-option {
     width: 16px;
     height: 16px;
+    filter: invert(1) brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    .img-navbar-option {
+        filter: invert(0) brightness(1);
+    }
+}
+
+[data-theme="light"] .img-navbar-option {
+    filter: invert(1) brightness(0.8);
+}
+
+[data-theme="dark"] .img-navbar-option {
+    filter: invert(0) brightness(1);
 }
 
 
@@ -56,7 +72,7 @@
 .li-navbar-active a {
     display: inline-block;
     padding: 0.75rem 1.25rem;
-    color: #4b5563;
+    color: var(--text-primary);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
@@ -74,12 +90,12 @@
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #000000, #222222);
+    background: linear-gradient(90deg, var(--text-secondary), var(--text-secondary));
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .li-navbar a:hover {
-    color: #000000;
+    color: var(--text-secondary);
 }
 
 .li-navbar a:hover::after {
@@ -87,7 +103,7 @@
 }
 
 .li-navbar-active a {
-    color: #000000;
+    color: var(--text-secondary);
     font-weight: 600;
 }
 
@@ -110,10 +126,10 @@
 .span-to-number-cart {
     position: absolute;
     z-index: 500;
-    background: red;
+    background: var(--error-color);
     bottom: 0;
     right: 1;
-    color: #fff;
+    color: var(--background);
     padding: 1px 4px;
     border-radius: 50px;
     font-size: 10px;

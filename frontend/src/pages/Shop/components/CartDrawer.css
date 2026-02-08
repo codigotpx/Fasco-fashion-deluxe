@@ -4,11 +4,11 @@
     top: 0;
     position: fixed;
     right: -100%;
-    background-color: #fff;
+    background-color: var(--background);
     width: 400px;
     height: 100%;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease;
+    transition: right 0.3s ease, background-color 0.3s ease;
     z-index: 1000;
 }
 
@@ -18,13 +18,23 @@
     top: 0;
     position: fixed;
     right: 0;
-    background-color:#fff;
+    background-color: var(--background);
     padding: 20px;
     width: 500px;
     height: 96%;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease;
+    transition: right 0.3s ease, background-color 0.3s ease;
     z-index: 1000;
+}
+
+[data-theme="light"] .cart-drawer-close,
+[data-theme="light"] .cart-drawer-open {
+    background-color: #ffffff;
+}
+
+[data-theme="dark"] .cart-drawer-close,
+[data-theme="dark"] .cart-drawer-open {
+    background-color: #0f172a;
 }
 
 
@@ -54,7 +64,7 @@
 .image-item {
     width: 150px;
     height: 160px;
-    background: #ebebeb;
+    background: var(--gray-lighter);
     border-radius: 12px;
     object-fit: cover;
     object-position: center;
@@ -70,21 +80,29 @@
     display: flex;
     flex-direction: column;
     margin-top: auto;
-    border-top: 1px solid #8A8A8A;
+    border-top: 1px solid var(--text-primary);
 }
 
 .total-price {
     display: flex;
     justify-content: space-between;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin: 15px 0;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
 }
 
 .variant-primary {
     margin: 0;
+    color: var(--text-secondary);
+    font-weight: 500;
 }
 
 
 .container-button-add-remove-cart{
-    border: 1px solid #EEEEEE;
+    border: 1px solid var(--gray-very-light);
     width: 71px;
     display: flex;
     padding: 7px 10px;
@@ -96,10 +114,20 @@
     border: none;
     cursor: pointer;
     margin: 0 5px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.button-add-remove-product-cart:hover {
+    color: var(--accent-color);
+    transform: scale(1.15);
 }
 
 .span-count-cart {
     font-size: 13px;
+    color: var(--text-secondary);
 }
 
 .contianer-product-cart {
@@ -122,3 +150,12 @@
 
     
 }
+
+[data-theme="light"] .icon-close-cart-drawer {
+    filter: invert(1) brightness(0.8);
+}
+
+[data-theme="dark"] .icon-close-cart-drawer {
+    filter: invert(0) brightness(1);
+}
+

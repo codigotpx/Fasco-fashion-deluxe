@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-top: 2px solid #484848;
+    border-top: 2px solid var(--border);
 }
 
 .footer-logo-fasco {
@@ -13,8 +13,8 @@
     font-family: 'volkhov', serif;
     line-height: 100%;
     justify-self: flex-start;
-    color: #484848;
-    fill: #484848;
+    color: var(--text-secondary);
+    fill: var(--text-secondary);
 }
 
 .footer-link-container {
@@ -33,7 +33,7 @@
 .footer-copyright {
     font-family: poppins, sans-serif;
     font-size: 10px;
-    color: #484848;
+    color: var(--text-secondary);
 }
 
 .footer-link-copyright {
@@ -43,6 +43,7 @@
 
 .footer-link-copyright:hover {
     text-decoration: underline;
+    opacity: 0.8;
 }
 
 .footer-li {
@@ -50,7 +51,7 @@
     font-family: poppins, sans-serif;
     list-style: none;
     gap: 20px;
-    color: #484848 ;
+    color: var(--text-secondary);
     font-size: 13px;
     cursor: pointer;
 }
@@ -79,7 +80,7 @@
         justify-content: center;
         width: 100%;
         gap: 0;
-        border-bottom: 1px solid #484848;
+        border-bottom: 1px solid var(--border);
     
     }
 }

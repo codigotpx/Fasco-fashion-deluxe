@@ -21,6 +21,8 @@
 
 .text-or {
     margin: 50px auto;
+    color: var(--text-primary);
+    font-weight: 500;
 }
 
 .register-form-container {
@@ -35,12 +37,25 @@
 .input-login-form {
     border: none;
     padding: 5px;
-    border-bottom: 1px solid #9D9D9D;
-    place-content: #9D9D9D;
+    border-bottom: 2px solid var(--gray-input);
+    background-color: transparent;
+    color: var(--text-secondary);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.input-login-form::placeholder {
+    color: var(--text-primary);
+    opacity: 0.6;
 }
 
 .input-login-form:hover {
-    border-bottom: 1px solid #9D9D9D;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.input-login-form:focus {
+    border-bottom: 2px solid var(--accent-color);
+    outline: none;
 }
 
 .button-register {
@@ -49,7 +64,7 @@
 }   
 
 .link-register-to-login {
-    color: #5B86E5;
+    color: var(--accent-color);
 }
 
 .link-register-to-login:hover {

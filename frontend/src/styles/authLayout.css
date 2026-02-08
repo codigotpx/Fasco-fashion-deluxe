@@ -3,15 +3,17 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: var(--background);
 }
 
 .container-form{
     display: flex;
     border-radius: 10px;
     border: solid;
-    border-color: #DBDBDB;
+    border-color: var(--border);
     border-width: 2px;
     margin: 0 auto;
+    background-color: var(--background);
 }
 
 .icon-login {
@@ -33,7 +35,7 @@
 
 .p-login-sing-in-to-fasco {
     font-size: 20px;
-    color: #000;
+    color: var(--text-secondary);
 }
 
 @media screen and (max-width: 769px) {

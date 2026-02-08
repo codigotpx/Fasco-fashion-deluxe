@@ -1,7 +1,7 @@
 .container-filter-products {
    width: 250px;
    height: auto;
-   background-color: #fff;
+   background-color: var(--background);
    overflow-y: auto;
 }
 
@@ -19,11 +19,19 @@
 .container-section-filters .button-size-filter {
     padding: 8px 15px;
     margin: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border);
     border-radius: 5px;
-    background-color: #fff;
-    color: #8A8A8A;
-    cursor: pointer
+    background-color: var(--background);
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.container-section-filters .button-size-filter:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: transparent;
 }
 
 .container-filter-products .button-color-filter {
@@ -42,7 +50,7 @@
 
 .container-filter-products .label-filter {
     font-size: 15px;
-    color: #8A8A8A;
+    color: var(--text-primary);
     margin: 0 5px 20px 0;
 }
 
@@ -52,13 +60,13 @@
 
 .container-filter-products .container-open-close-filters .spam-filter-open-close {
     font-size: 15px;
-    color: #8A8A8A;
+    color: var(--text-primary);
 }
 
 .container-filter-products .button-brand-filter {
     border: none;
-    background-color: #fff;
-    color: #8A8A8A;
+    background-color: var(--background);
+    color: var(--text-primary);
     cursor: pointer;
 }
 
@@ -76,18 +84,28 @@
 
 .container-filter-products .container-collection-filter .label-collection-filter {
     font-size: 15px;
-    color: #8A8A8A;
+    color: var(--text-primary);
 }
 
 .container-filter-products .label-radio-filter {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.container-filter-products .label-radio-filter:hover {
+    opacity: 0.8;
 }
 
 .container-filter-products .button-tags-filter {
     border: none;
-    background-color: #fff;
+    background-color: var(--background);
     cursor: pointer;
-    color: #8A8A8A;
+    color: var(--text-primary);
     margin: 0 5px;
 }
 
@@ -108,7 +126,7 @@
 .icon-close-filter span {
     width: 25px;
     height: 3px;
-    background: #000;
+    background: var(--text-secondary);
 }
 
 .icon-close-filter span:first-child {

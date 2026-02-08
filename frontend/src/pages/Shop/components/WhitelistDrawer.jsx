@@ -22,7 +22,7 @@ const WhiteListDrawer = () => {
             <div className="container-header-card-white-list">
                 <h2>Wish List</h2>
                 <button className="button-cart" onClick={() => setIsWishListOpen(!isWishListOpen)}>
-                    <img src="/xmark-solid-full.svg" width={20} alt="" />
+                    <img className="icon-close-cart-drawer" src="/xmark-solid-full.svg" width={20} alt="" />
                 </button>
             </div>
 

@@ -10,6 +10,8 @@ const Navbar = () => {
     const { user } = useAuth()
     const sections = ["Home", "Deals", "New Arrivals"];
     const { isUserOpen, setIsUserOpen } = useNavbar()
+
+    const [ theme, setTheme ] = useState(localStorage.getItem('theme') || 'light')
     
     const [ activeSection, setActiveSection ] = useState("Home");
     const [ isMenu, setIsMenu ] = useState(false)
@@ -39,6 +41,17 @@ const Navbar = () => {
         return () => observer.disconnect()
     }, [])
 
+
+    const applyTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme)
+        localStorage.setItem('theme', theme)
+    }
+
+    const toggleTheme = () => {
+        const newTheme = theme === 'light' ? 'dark' : 'light'
+        setTheme(newTheme)
+        applyTheme(newTheme)
+    }
    
     return (
         <div className='navbar-container'>
@@ -55,6 +68,19 @@ const Navbar = () => {
                     <li className='li-navbar'>
                         <Link className='li-link' to="/shop">Shop</Link>
                     </li>
+
+                    {/*Change color theme */}
+
+                    <div className='theme-toggle'>
+                        <div className='switch'>
+                            <div className='switch-slider' onClick={toggleTheme}>
+                                <span className='icon-theme'>
+                                    {theme === 'light' ? '🌙' : '☀️'}
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
 
                     {user? 
                         <div className='container-acocount-home' onClick={() => setIsUserOpen(!isUserOpen)}>
@@ -77,6 +103,16 @@ const Navbar = () => {
                    
                      
                 </ul>
+
+                 <div className={'theme-toggle-mobile '}>
+                        <div className='switch'>
+                            <div className='switch-slider' onClick={toggleTheme}>
+                                <span className='icon-theme'>
+                                    {theme === 'light' ? '🌙' : '☀️'}
+                                </span>
+                            </div>
+                        </div>
+                </div>
 
                 <div className={`hamburguer ${isMenu ? 'active' : ''}`} id='hamburguer'
                 onClick={() => setIsMenu(!isMenu)}>

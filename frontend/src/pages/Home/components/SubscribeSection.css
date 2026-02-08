@@ -35,13 +35,13 @@
 .description-sub {
     font-size: 10px;
     text-align: justify;
-    color: #8A8A8A;
+    color: var(--text-primary);
 }
 
 .user-sub {
     font-size: 10px;
     text-align: justify;
-    color: #8A8A8A;
+    color: var(--text-primary);
     display: flex;
     flex-direction: row;
     justify-self: flex-start;
